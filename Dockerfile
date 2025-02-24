@@ -3,7 +3,9 @@ FROM ubuntu:22.04
 # コンテナ内のタイムゾーン
 ENV TZ=Asia/Tokyo
 
-COPY ./ ./how-linux-works
+WORKDIR /work
+
+COPY . /work
 
 RUN apt update && apt install sudo
 
